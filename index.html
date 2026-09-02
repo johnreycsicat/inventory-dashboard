@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Product Inventory Dashboard</h1>
+            <p>Manage and monitor your product inventory</p>
+        </header>
+
+        <section class="controls">
+
+            <div class="input-group">
+                <label for="searchInput">Search Product</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter product name"
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="categoryFilter">Category</label>
+                <select id="categoryFilter">
+                    <option value="All">All</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Displays">Displays</option>
+                    <option value="Storage">Storage</option>
+                    <option value="Components">Components</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="searchBtn">Search</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+
+        </section>
+
+        <section class="summary">
+
+            <div class="summary-card">
+                <h3>Total Inventory Value</h3>
+                <p id="totalInventoryValue">₱0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Low-Stock Products</h3>
+                <p id="lowStockCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Out-of-Stock Products</h3>
+                <p id="outOfStockCount">0</p>
+            </div>
+
+        </section>
+
+        <section class="products-section">
+
+            <div id="noResultsMessage">
+                No products found
+            </div>
+
+            <div id="productList"></div>
+
+        </section>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
